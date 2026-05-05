@@ -1,0 +1,14 @@
+# Thông tin kết nối OpenSearch
+opensearch:
+  url: "https://<OPENSEARCH_IP>:9200"
+  username: "admin"
+  password: "your_password"
+  verify_ssl: false
+
+# Cấu hình lưu trữ và index
+settings:
+  state_file: "/tmp/opensearch_index_state.json"
+  dest_index: "logs-ism-opensearch-pop-write"
+  include_prefixes: 
+    - "logs-"
+    - "metrics-"
