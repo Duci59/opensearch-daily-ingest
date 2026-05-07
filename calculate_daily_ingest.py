@@ -52,7 +52,7 @@ def get_current_index_sizes(conf, logger):
 
         include = set_conf.get('include_prefixes', ['logs-', 'metrics-'])
         return {
-            item['index']: int(item.get('store.size', 0) or 0)
+            item['index']: int(item.get('pri.store.size', 0) or 0)
             for item in indices
             if any(item['index'].startswith(pre) for pre in include)
         }
